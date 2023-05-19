@@ -35,7 +35,7 @@ public class MagicWorms extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 400;
     Random gen = new Random();
-    
+    int worms = 10;
 
     @Override
     public void settings() {
@@ -51,16 +51,22 @@ background(0,0,0);
     @Override
     public void draw() {
     	makeMagical();
-    	for(int i = 0; i < 300; i++) {
+    	
+    	for(int i = 0; i < worms; i++) {
     		fill(255,0,0);
     		ellipse(getWormX(i),getWormY(i),20,20);
+    		 
     	}
-
+    	
     }
 
+    public void mouseClicked() {
+    	worms += 1;
+    }
     static public void main(String[] args) {
         PApplet.main(MagicWorms.class.getName());
     }
+   
 
     /*********************** DO NOT MODIFY THE CODE BELOW ********************/
     float frequency = 0.001f;
