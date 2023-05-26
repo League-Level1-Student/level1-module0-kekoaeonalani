@@ -28,31 +28,45 @@ public class PhotoQuiz {
 		// “Copy Image Address” )
 
 		// 2. create a variable of type "Component" that will hold your image
-
+Component bird;
 		// 3. use the "createImage()" method below to initialize your Component
+bird = createImage("https://www.fws.gov/sites/default/files/2021-09/redtailed_tropicbird_DanZimmerman_Feb2019%20%282%29.jpg");
 
 		// 4. add the image to the quiz window
-
+quizWindow.add(bird);
 		// 5. call the pack() method on the quiz window
-
+quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+String questionOne = JOptionPane.showInputDialog("Is the bird mostly white?");
 		// 7. print "CORRECT" if the user gave the right answer
+if (questionOne.equals("yes")) {
+	JOptionPane.showMessageDialog(null, "CORRECT");
+}
+else {
+	JOptionPane.showMessageDialog(null, "INCORRECT");
 
+}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+quizWindow.remove(bird);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+Component whale;
+whale = createImage("https://imageio.forbes.com/specials-images/imageserve/620e994e6276ae1623f05d4f/0x0.jpg?format=jpg&width=1200");
+quizWindow.add(whale);
 		// 11. add the second image to the quiz window
 
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+String questionTwo = JOptionPane.showInputDialog("are the orca's black and white?");
+if (questionTwo.equals("yes")) {
+	JOptionPane.showMessageDialog(null, "CORRECT");
+}
+else {
+	JOptionPane.showMessageDialog(null, "INCORRECT");
 		// 14+ check answer, say if correct or incorrect, etc.
 
 	}
