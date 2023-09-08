@@ -67,9 +67,11 @@ if (questionTwo.equals("yes")) {
 }
 else {
 	JOptionPane.showMessageDialog(null, "INCORRECT");
+}
+	}
 		// 14+ check answer, say if correct or incorrect, etc.
 
-	}
+	
 
 	private Component createImage(String imageUrl) {
 		JLabel imageLabel = new JLabel();
