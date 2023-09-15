@@ -22,9 +22,9 @@ public class BodyPartQuiz {
 	// place them in the recipe package(body_part_quiz), and change the names below.
 
 	String firstImage = "src/_03_gui_with_help/_4_body_part_quiz/arnold.jpeg";
-	String secondImage = "src/_05_body_part_quiz/leonardo.jpeg";
-	String thirdImage = "src/_05_body_part_quiz/morgan.jpeg";
-	String fourthImage = "src/_05_body_part_quiz/jack.jpeg";
+	String secondImage = "src/_03_gui_with_help/_4_body_part_quiz/leonardo.jpeg";
+	String thirdImage = "src/_03_gui_with_help/_4_body_part_quiz/morgan.jpeg";
+	String fourthImage = "src/_03_gui_with_help/_4_body_part_quiz/jack.jpeg";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(200, 150);
 
 		showNextImage();
 
@@ -59,17 +59,54 @@ int score = 0;
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
+		if (guess.equals("arnold")) {
+			JOptionPane.showMessageDialog(null, "You are right!");
+			score += 1;
+		}
 
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
+		else {
+			JOptionPane.showMessageDialog(null, "Wrong! This is arnold, not " + guess + ", you idjot.");
+
+		}
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
+		guess = JOptionPane.showInputDialog("Who is this?");
+		if (guess.equals("leonardo")) {
+			JOptionPane.showMessageDialog(null, "You are right!");
+			score +=1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Honestly, your parents are raising a donut.\nIts leonardo!");
 
+		}
+		showNextImage();
+		guess = JOptionPane.showInputDialog("Who is this?");
+		if (guess.equals("morgan")) {
+			JOptionPane.showMessageDialog(null, "You are right!");
+			score +=1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "No! Its morgan!");
+
+		}
+		showNextImage();
+		guess = JOptionPane.showInputDialog("Who is this?");
+		if (guess.equals("jack black")) {
+			JOptionPane.showMessageDialog(null, "You are right!");
+			score +=1;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Bowser with bestow his wrath on you.\n Its JACK BLACK for goodness sakes!");
+
+		}
+		
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
-
+		JOptionPane.showMessageDialog(null, "Your score is" + score + "!");
 	}
 
 	public void showNextImage() {
